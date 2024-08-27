@@ -53,6 +53,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,19 +68,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap-5.3.3-examples\assets\brand\bootstrap-logo-white.svg" />
+    <Content Include="bootstrap-5.3.3-examples\assets\brand\bootstrap-logo.svg" />
+    <Content Include="bootstrap-5.3.3-examples\assets\dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-5.3.3-examples\assets\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="bootstrap-5.3.3-examples\assets\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap-5.3.3-examples\assets\js\color-modes.js" />
+    <Content Include="bootstrap-5.3.3-examples\footers\index.html" />
+    <Content Include="bootstrap-5.3.3-examples\headers\headers.css" />
+    <Content Include="bootstrap-5.3.3-examples\headers\index.html" />
+    <Content Include="bootstrap-5.3.3-examples\sign-in\index.html" />
+    <Content Include="bootstrap-5.3.3-examples\sign-in\sign-in.css" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="admin.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap-5.3.3-examples\assets\dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-5.3.3-examples\assets\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="bootstrap-5.3.3-examples\assets\dist\js\bootstrap.bundle.min.js.map" />
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WebForm1.aspx.resx">
+      <DependentUpon>WebForm1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
