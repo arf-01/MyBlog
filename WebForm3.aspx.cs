@@ -24,9 +24,9 @@ namespace MyBlog
             {
                 string strcon = ConfigurationManager.ConnectionStrings["dbcon"].ConnectionString;
 
-                using (SqlConnection con = new SqlConnection(strcon))
-                {
-                    con.Open();
+                SqlConnection con = new SqlConnection(strcon);
+                
+                   con.Open();
 
                     SqlCommand cmd = new SqlCommand("INSERT INTO Table_1 ([post]) VALUES (@post);", con);
                     cmd.Parameters.AddWithValue("@post", HiddenField1.Value.Trim());
@@ -34,7 +34,7 @@ namespace MyBlog
                     cmd.ExecuteNonQuery();
 
                     con.Close();
-                }
+                
 
 
                 TextBox1.Text = "";
