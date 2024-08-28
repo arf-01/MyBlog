@@ -130,30 +130,24 @@
     <link href="../bootstrap-5.3.3-examples/sign-in.css" rel="stylesheet">
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
-    <div class="container">
+  <div class="container">
         <main class="form-signin">
-          <form id="form1" runat="server">
-            <img class="mb-4" src="../bootstrap-5.3.3-examples/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">Enter Admin Credentials</h1>
+            <form id="form1" runat="server">
+                <img class="mb-4" src="../bootstrap-5.3.3-examples/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                <h1 class="h3 mb-3 fw-normal">Enter Admin Credentials</h1>
 
-            <div class="form-floating">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
-            </div>
+                <div class="form-floating">
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Placeholder="name@example.com" />
+                    <label for="txtEmail">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" Placeholder="Password" />
+                    <label for="txtPassword">Password</label>
+                </div>
 
-            <div class="form-check text-start my-3">
-              <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Remember me
-              </label>
-            </div>
-            <button class="btn btn-primary w-100 py-2" type="submit">Enter</button>
-            <p class="mt-5 mb-3 text-body-secondary">&copy; 2024</p>
-          </form>
+                <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary w-100 py-2" Text="Enter" OnClick="btnLogin_Click" />
+                <p class="mt-5 mb-3 text-body-secondary">&copy; 2024</p>
+            </form>
         </main>
     </div>
     <script src="../bootstrap-5.3.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
