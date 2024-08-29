@@ -13,6 +13,26 @@
 
      <asp:HiddenField ID="HiddenField1" runat="server" />
 
+
+    
+      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="id" CssClass="table" OnRowCommand="GridView1_RowCommand">
+        <Columns>
+         
+            <asp:BoundField DataField="id" HeaderText="Blog ID" />
+
+            <asp:BoundField DataField="post" HeaderText="Content" />
+
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:LinkButton ID="EditButton" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("id") %>'></asp:LinkButton>
+                    <asp:LinkButton ID="DeleteButton" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("id") %>' OnClientClick="return confirm('Are you sure you want to delete this post?');"></asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
+
+    
+
     <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
      <script type="text/javascript">
          ClassicEditor
