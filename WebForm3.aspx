@@ -12,7 +12,7 @@
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 
      <asp:HiddenField ID="HiddenField1" runat="server" />
-
+      <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
 
     
       <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="id" CssClass="table" OnRowCommand="GridView1_RowCommand">
@@ -25,6 +25,7 @@
             <asp:TemplateField>
                 <ItemTemplate>
                     <asp:LinkButton ID="EditButton" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("id") %>'></asp:LinkButton>
+
                     <asp:LinkButton ID="DeleteButton" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("id") %>' OnClientClick="return confirm('Are you sure you want to delete this post?');"></asp:LinkButton>
                 </ItemTemplate>
             </asp:TemplateField>
@@ -33,7 +34,7 @@
 
     
 
-    <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
+  
      <script type="text/javascript">
          ClassicEditor
              .create(document.querySelector('#<%= TextBox1.ClientID %>'))

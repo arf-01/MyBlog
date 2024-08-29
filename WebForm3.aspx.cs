@@ -53,6 +53,13 @@ namespace MyBlog
                 Response.Redirect("~/WebForm1.aspx");
 
             }
+
+            if(e.CommandName== "Edit")
+            { 
+
+                Response.Redirect("~/Update.aspx?id="+id.ToString());
+
+            }
             
         }
 
